@@ -1,0 +1,23 @@
+{
+  "name": "project-euler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/_mocha --use_strict $(find . -name '*.spec.js' ! -ipath '*node_modules*')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonwaters/project-euler.git"
+  },
+  "author": "Jason Waters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonwaters/project-euler/issues"
+  },
+  "homepage": "https://github.com/jasonwaters/project-euler#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
