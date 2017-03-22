@@ -23,6 +23,10 @@ describe('roman-numerals', () => {
       expect(romanNumerals.parseRomanNumeral('MDCCCCXXXVII')).to.equal(1937);
     });
 
+    it('CMLXXXXI == 991', () => {
+      expect(romanNumerals.parseRomanNumeral('CMLXXXXI')).to.equal(991);
+    });
+
     it('parses a group', () => {
       let result = romanNumerals.parseGroup(['MMMMDCLXXII', 'MMDCCCLXXXIII', 'MMMDLXVIIII', 'MDCCCCXXXVII'])
       assert.sameMembers([4672, 2883, 3569, 1937], result);
@@ -46,21 +50,25 @@ describe('roman-numerals', () => {
       expect(romanNumerals.generateRomanNumeral(1937)).to.equal('MCMXXXVII');
     });
 
+    it('991 == MCXCI', () => {
+      expect(romanNumerals.generateRomanNumeral(991)).to.equal('CMXCI');
+    });
+
     it('generates a group', () => {
       let result = romanNumerals.generateGroup([4672, 2883, 3569, 1937]);
       assert.sameMembers(['MMMMDCLXXII', 'MMDCCCLXXXIII', 'MMMDLXIX', 'MCMXXXVII'], result);
     })
   });
 
-  describe('efficiency gains', () => {
-    it('diffs', () => {
+  describe('Finds the number of characters saved by rewriting in minimal form', () => {
+    it('for a list of inefficiently written roman numerals', () => {
       let result = romanNumerals.diff(['MMMMDCLXXII', 'MMDCCCLXXXIII', 'MMMDLXVIIII', 'MDCCCCXXXVII']);
       expect(result).to.equal(6);
     });
 
-    it('Finds the number of characters saved by writing each of the EULER test values in their minimal form ', () => {
+    it('for the list of EULER test values', () => {
       let result = romanNumerals.diff(EULER_VALUES);
-      expect(result).to.equal(831);
+      expect(result).to.equal(743);
     });
   });
 

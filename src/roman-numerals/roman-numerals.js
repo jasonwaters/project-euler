@@ -22,19 +22,21 @@ const ROMAN_NUMERALS = {
 const NUMERALS = Object.keys(ROMAN_NUMERALS);
 const NUMERAL_VALUES = NUMERALS.map(key => ROMAN_NUMERALS[key]);
 
+const ROMAN_NUMERALS_BY_VALUE = NUMERAL_VALUES.reduce((tot, next, idx) => {
+  tot[next] = NUMERALS[idx];
+  return tot;
+}, {});
 
 function parseRomanNumeral(str) {
   let result = 0;
 
   while(str.length) {
 
-    for(let char of NUMERALS) {
-      if(str.endsWith(char)) {
-        result += ROMAN_NUMERALS[char];
-        str = str.substr(0, str.length-char.length);
-        break;
-      }
-    }
+    let numeralValue = ROMAN_NUMERALS[str.substr(-2)] || ROMAN_NUMERALS[str.substr(-1)];
+    let numeral = ROMAN_NUMERALS_BY_VALUE[numeralValue];
+
+    result += numeralValue;
+    str = str.substr(0, str.length-numeral.length);
 
   }
 
