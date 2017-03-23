@@ -7,6 +7,6 @@ Ultimately, I ended up generating a cost matrix from the bottom up, with each no
 
 For fun, I reused my traverse method to generate the path of values based on the total cost.
 
-I did do some googling after my initial effor was too simplistic.  [This page](http://www.mathblog.dk/project-euler-81-find-the-minimal-path-sum-from-the-top-left-to-the-bottom-right-by-moving-right-and-down/) helped me to think of a better solution.
+I did some googling after my initial effort was too simplistic.  [This page](http://www.mathblog.dk/project-euler-81-find-the-minimal-path-sum-from-the-top-left-to-the-bottom-right-by-moving-right-and-down/) helped me to think of a better solution.
 
 I spent couple hours on this.
