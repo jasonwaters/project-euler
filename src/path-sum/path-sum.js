@@ -2,6 +2,7 @@
 // Problem 81
 // https://projecteuler.net/problem=81
 
+/* O(n) */
 function traverseMinimalPath(matrix, costMatrix) {
   const numRows = costMatrix.length;
   const numCols = costMatrix[0].length;
@@ -28,7 +29,7 @@ function traverseMinimalPath(matrix, costMatrix) {
   return stack;
 }
 
-
+/* O(n^2) */
 function minimalPath(matrix) {
   let costMatrix = matrix.map(row => row.slice(0));
 

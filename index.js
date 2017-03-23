@@ -1,35 +1,19 @@
 const EULER_VALUES = require('./src/roman-numerals/p089_roman.json').values;
+const EULER_MATRIX = require('./src/path-sum/p081_matrix.json').data;
 
 const prizeStrings = require('./src/prize-strings/prize-strings');
 const romanNumerals = require('./src/roman-numerals/roman-numerals');
 const pathSum = require('./src/path-sum/path-sum');
 
-// let results = prizeStrings(4);
-// console.log(results.length, results);
+const fibEven = require('./src/fibonacci-even/fibonacci-even');
 
-// let values = romanNumerals.parseGroup(EULER_VALUES);
-//
-// let efficient = romanNumerals.generateGroup(values);
-//
-// let totalSavings = 0;
-//
-// efficient.forEach((value, idx) => {
-//   let savings = EULER_VALUES[idx].length - value.length;
-//   totalSavings += savings;
-//   console.log(`${values[idx]} - ${EULER_VALUES[idx]}, ${value}, ${savings}, ${totalSavings}`);
-// });
+console.log("Hello!");
+console.log("-----------------------");
 
+console.log(`There are ${prizeStrings(30).count} prize worthy attendance strings in 30 days.`);
 
-console.log(pathSum.minimalPath([
-  [131,673,234,103,18],
-  [201,96,342,965,150],
-  [630,803,746,422,111],
-  [537,699,497,121,956],
-  [805,732,524,37,331],
-]));
+console.log(`${romanNumerals.diff(EULER_VALUES)} roman numeral characters can be saved by rewriting thier values more efficiently.`);
 
-console.log(pathSum.minimalPath([
-  [1,2,3],
-  [4,5,6],
-  [7,8,9],
-]));
+console.log(`The minimal path sum of the Euler 80x80 matrix is ${pathSum.minimalPath(EULER_MATRIX).sum}.`);
+
+console.log(`The sum of even values in the fibonacci sequence up to 4 million is ${fibEven.findEvenFibonacciSum(4000000)}.`);

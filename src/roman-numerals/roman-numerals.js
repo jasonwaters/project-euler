@@ -27,6 +27,7 @@ const ROMAN_NUMERALS_BY_VALUE = NUMERAL_VALUES.reduce((tot, next, idx) => {
   return tot;
 }, {});
 
+/* O(n) */
 function parseRomanNumeral(str) {
   let result = 0;
 
@@ -43,6 +44,7 @@ function parseRomanNumeral(str) {
   return result;
 }
 
+/* O(n)-ish */
 function generateRomanNumeral(num) {
     let result = '';
 
