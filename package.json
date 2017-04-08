@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index",
-    "test": "./node_modules/.bin/_mocha --use_strict $(find . -name '*.spec.js' ! -ipath '*node_modules*')"
+    "test": "./node_modules/.bin/mocha --opts ./mocha.opts"
   },
   "repository": {
     "type": "git",

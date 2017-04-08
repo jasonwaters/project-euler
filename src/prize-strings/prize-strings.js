@@ -5,9 +5,9 @@
 const {LATE, ABSENT, ON_TIME} = require("./attendance.enum.js");
 
 const getNumPrizeWinning = require('./prize-strings-formula');
-const Attendance = require('./addendance.model');
+const Attendance = require('./attendance.model.js');
 
-/* O(n!) */
+/* O(3^n) */
 function permutations(numDays, possibleStates, Type) {
   function permute(permutation = new Type(), permutations = []) {
     if (permutation.length === numDays) {
