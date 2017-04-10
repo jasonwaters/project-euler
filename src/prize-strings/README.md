@@ -1,7 +1,7 @@
 # Prize Strings
 https://projecteuler.net/problem=191
 
-I thought this one would be fun, since it looked like a permutations problem.  I figured, I'll just generate all the different variations of late, on time, and absent.  Then I can look at the strings and determine if they are prize worthy.  This approach worked just fine for the 4 day example.  Then I tried running it for the 30 day period.  I figured it would take under a minute, but boy was I wrong! O(n!)  
+I thought this one would be fun, since it looked like a permutations problem.  I figured, I'll just generate all the different variations of late, on time, and absent.  Then I can look at the strings and determine if they are prize worthy.  This approach worked just fine for the 4 day example.  Then I tried running it for the 30 day period.  I figured it would take under a minute, but boy was I wrong! O(3^n)  
  
 I revized my solution to calculate prize-worthiness while generating the permutations, and made the recursion stop if it detects the permutation is not prize worthy at any time.  While this did make the algorithm more efficient, it still was not enough for my computer to slog through generating all 30-day combinations in under a few weeks. :dizzy_face:
  
