@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index",
-    "test": "./node_modules/.bin/mocha --opts ./mocha.opts"
+    "test": "nyc --reporter=html --reporter=text mocha  --opts ./mocha.opts --timeout=3000"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "dependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
+  },
+  "devDependencies": {
+    "nyc": "^11.1.0"
   }
 }
