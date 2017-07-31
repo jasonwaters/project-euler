@@ -14,6 +14,5 @@ describe('fibonacci-even', () => {
       let result = fibonacciEven.fib(79);
       expect(result).to.equal(23416728348467685);
     });
-
   });
 });
