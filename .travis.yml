@@ -1,2 +1,9 @@
 language: node_js
-after_success: npm run coverage
+after_success:
+  - npm run coverage
+  - npm run coverage-codecov
+install:
+  - npm install -g codecov
+script:
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+  - codecov

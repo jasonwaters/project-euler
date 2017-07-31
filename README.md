@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/jasonwaters/project-euler.svg?branch=master)](https://travis-ci.org/jasonwaters/project-euler)
-
-[![Coverage Status](https://coveralls.io/repos/github/jasonwaters/project-euler/badge.svg?branch=master)](https://coveralls.io/github/jasonwaters/project-euler?branch=master)
+[![Build Status](https://travis-ci.org/jasonwaters/project-euler.svg?branch=master)](https://travis-ci.org/jasonwaters/project-euler) [![Coverage Status](https://coveralls.io/repos/github/jasonwaters/project-euler/badge.svg?branch=master)](https://coveralls.io/github/jasonwaters/project-euler?branch=master)
 
 # Project Euler
 

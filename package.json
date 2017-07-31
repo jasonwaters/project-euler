@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coverage-codecov": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "start": "node ./index",
     "test": "nyc --reporter=html --reporter=text mocha  --opts ./mocha.opts --timeout=3000"
   },
